@@ -1,0 +1,54 @@
+/* Toty simple styles - gentle pink/beige palette */
+:root{
+  --bg:#fff7f6;
+  --soft:#fff0f2;
+  --accent:#f7c6d0;
+  --text:#4b3f3f;
+  --muted:#7a6f6f;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--text);background:var(--bg);min-height:100vh;position:relative}
+.decor-bg{
+  position:fixed;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(255,230,235,0.6) 0 120px, transparent 121px),
+    radial-gradient(circle at 90% 90%, rgba(255,245,240,0.5) 0 160px, transparent 161px);
+  mix-blend-mode: normal;
+  z-index:0;
+}
+.header{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:linear-gradient(90deg, rgba(255,246,247,0.6), rgba(255,250,248,0.4));border-bottom:1px solid rgba(0,0,0,0.03)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{font-weight:800;font-size:22px;color:var(--accent);background:linear-gradient(90deg,#fff,#ffeaf0);padding:8px 12px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6)}
+.tag{font-size:13px;color:var(--muted)}
+.contacts{display:flex;align-items:center;gap:12px}
+.phone a{color:var(--accent);font-weight:700;text-decoration:none}
+.lang button{border-radius:8px;border:0;padding:6px 8px;margin-left:4px;background:transparent;cursor:pointer}
+.lang .active{background:var(--accent);}
+
+.container{max-width:980px;margin:24px auto;padding:12px;position:relative;z-index:2}
+.hero{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));border-radius:16px;text-align:center}
+.hero h1{font-size:34px;margin:6px 0}
+.lead{color:var(--muted);margin-bottom:12px}
+.nav-sections{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;background:rgba(255,240,242,0.7);text-decoration:none;color:var(--text);border:1px solid rgba(0,0,0,0.03)}
+
+.card{margin-top:18px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.6);box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.cards{display:flex;gap:14px;flex-wrap:wrap}
+.item{flex:1 1 220px;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fffaf9);text-align:center}
+.thumb{height:120px;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;justify-content:center}
+.price{color:var(--muted);font-weight:700}
+.more{display:inline-block;margin-top:8px;text-decoration:none;color:var(--accent);font-weight:700}
+
+/* simple svg-like decorative shapes */
+.svg-deco{background-repeat:no-repeat;background-position:center;background-size:60%}
+.svg-deco.cupcake{background-image: radial-gradient(circle at 60% 40%, #fff 0 10px, transparent 11px), linear-gradient(180deg,#ffdfe6,#ffb6c2);border:3px dashed rgba(255,255,255,0.5)}
+.svg-deco.cake{background-image: linear-gradient(180deg,#fff1f3,#ffdfe6);border:2px solid rgba(255,255,255,0.6)}
+
+/* footer */
+.footer{text-align:center;color:var(--muted);padding:28px 0;margin-top:20px}
+
+/* responsive */
+@media(max-width:700px){
+  .cards{flex-direction:column}
+  .hero h1{font-size:26px}
+}
